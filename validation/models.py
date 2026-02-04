@@ -53,11 +53,10 @@ class Student(models.Model):
         verbose_name_plural = "Students"
     
     def clean(self):
-        """Model-level validation"""
+        """Model-level validation for cross-field validation rules"""
         super().clean()
-        # Additional custom validation
-        if self.grade < 0 or self.grade > 10:
-            raise ValidationError('Grade must be between 0.0 and 10.0')
+        # Additional custom validation can be added here
+        # Note: Field-level validation is handled by validators
     
     def __str__(self):
         return f"{self.name} ({self.email})"

@@ -31,3 +31,6 @@ venv.bak/
 # OS
 .DS_Store
 Thumbs.db
+
+# Utility scripts
+populate_db.py
